@@ -1,0 +1,19 @@
+{
+    "name": "guilherme/jogadores",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Guilherme\\Jogadores\\": "Jogadores/",
+            "Model\\": "Model/",
+            "Controller\\": "Controller/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gloterianota349",
+            "email": "guilhermemascarenhas2708@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
