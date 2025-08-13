@@ -12,7 +12,7 @@ class Connection {
         try {
             return new PDO("mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
         } catch (PDOException $e) {
-            die("Erro de conexão " . $e->getMessage());
+            die("Erro de conexão interno");
         }
     }
 }

@@ -28,6 +28,14 @@ class Player {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getPlayerById($id) {
+        $sql = "SELECT * FROM jogadores WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function addPlayer() {
         $sql = "INSERT INTO jogadores (name, idade, altura, nacionalidade, posicao, pe, num_camisa) VALUES (:name, :idade, :altura, :nacionalidade, :posicao, :pe, :num_camisa)";
         $stmt = $this->conn->prepare($sql);

@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /Jogadores/
+
+# Se não for arquivo ou pasta existente, redireciona para index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
